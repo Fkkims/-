@@ -1,0 +1,431 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#f7f7f7;
+}
+a {
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+ul,
+li {
+    list-style: none;
+}
+.fc {
+    color: #222;
+    font-weight: 400;
+}
+.box {
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+/* 顶部 */
+.header {
+    width: 100%;
+    height: 78px;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: #222;
+    box-shadow: 0 2px 0 0 rgb(0 0 0 / 2%);
+    z-index: 20;
+    transition: background 0.2s ease-in-out;
+}
+.header .container {
+    width:1180px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin:0 auto;
+}
+.header .logo {
+    width: 180px;
+    height: 30px;
+    margin-right: 5px;
+    background-image: url("https://muse.huaban.com/assets/c257ccb2a5a50804cc67d3cc09c3f337.svg");
+}
+.header .nav {
+    display: flex;
+    height: 100%;
+}
+.header .nav .item {
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.header .nav .arrow {
+    display: block;
+    border: 5px solid transparent;
+    border-top-color: #000;
+    margin: 0 0 0 1em;
+}
+.header .nav .item:hover .submenu {
+    display: block;
+}
+
+.header .nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -35px;
+    width: 360px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 3%), 0 1px 3px 0 rgb(0 0 0 / 7%),
+        0 4px 16px 0 rgb(0 0 0 / 7%);
+}
+.header .nav .submenu div {
+    left: 0;
+    min-width: calc(100% - 1px);
+    border-radius: 0;
+    background: #fff;
+    margin: 0;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.header .nav .submenu a {
+    margin-left: 0;
+    margin-right: 0;
+    width: calc(50% - 2 * 0.5rem);
+    padding: 12px 0 !important;
+    height: 40px;
+    color: #000;
+    font-weight: 400;
+}
+
+.header .nav a:hover {
+    color: tomato;
+}
+.header .nav .submenu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 34%;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.header .login_register {
+    margin-left: auto !important;
+}
+.header .login_register button {
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 6px 20px;
+    border: 1px solid transparent;
+    width: 75px;
+    height: 34px;
+    line-height: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.header .login_register .login:hover {
+    color: #fff;
+    background-color: #ccc;
+}
+.header .login_register .register {
+    background: #c0a75e;
+    color: #fff;
+}
+/* 内容区域 */
+.content {
+    margin-top: 100px;
+    font-size: 14px;
+}
+.content .container{
+    margin:0 auto;
+    width:1180px;
+}
+.content .nav1,
+.content .nav1_sub {
+    margin: 0;
+    border: unset;
+    border-radius: 0;
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 4%), 0 1px 6px 0 rgb(0 0 0 / 3%);
+    background-color: #fff;
+    padding: 30px 30px calc(30px - 1rem);
+}
+
+.content .nav_content {
+    display: flex;
+    height: 100%;
+}
+.content .nav_content .label {
+    min-width: 56px;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.content .nav1_sub {
+    border-top: 1px solid #f7f7f7;
+    display:none;
+}
+
+.content .nav_content .nav_list {
+    margin-left: 4px;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1em;
+}
+.content .nav_content .nav_list a:hover {
+    color: tomato;
+}
+.content .nav_content .nav_list .item {
+    color: #555;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.content .nav_content .nav_list .active {
+    color: tomato;
+}
+
+.content>.list {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.content .list .list_content {
+    display: flex;
+    flex-wrap: wrap;
+    width:1200px;
+}
+.content .list_content img{
+    align-self: center;
+}
+.content .list .item {
+    width: calc(25% - 20px);
+    margin:12.5px 10px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    /* margin: 0.85em 0.5em; */
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 4%), 0 1px 6px 0 rgb(0 0 0 / 3%);
+    transition:all .2s;
+}
+.content .list .item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 7%), 0 4px 16px 0 rgb(0 0 0 / 7%);
+}
+.content .list .item::before{
+    content:'';
+    display:inline-block;
+    width:42px;
+    height:42px;
+    background: url(https://muse.huaban.com/assets/c8b8ed832907271233b189a68fe47c3c.svg) no-repeat center center rgba(0,0,0,.5);
+    position:absolute;
+    top:-42px;
+    left:225px;
+    transition:top .2s;
+}
+.content .list .item:hover::before{
+    top:0px;
+}
+.content .list .item img {
+    width: 280px;
+    height: 280px;
+    display: block;
+    cursor: pointer;
+}
+.content .list .item .title {
+    border-top: 1px solid rgba(34, 36, 38, 0.1);
+    background: 0 0;
+    margin: 0;
+    font-weight: 700;
+    padding: 1em;
+    color: #222;
+    display: block;
+    text-align: center;
+}
+.content .list .item .extra {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.content .list .item .extra::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background-color: #ddd;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content .list .item .extra label {
+    color: #222;
+    font-size: 18px;
+}
+.content .list .item .extra p {
+    font-size: 80%;
+    margin-top: 10px;
+    color: rgb(204, 202, 202);
+}
+/* 分页 */
+.content .list .pagenation {
+    height: 50px;
+    background: #fff;
+    margin-top: 20px;
+}
+
+/* 排序 */
+.change{
+    width:100%;
+    height:24px;
+    margin:28px 0 18px 0;
+}
+.changes{
+    width:1180px;
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+    font-size:14px;
+}
+.changes1{
+    display:flex;
+}
+.changes1 p{
+    overflow:hidden;
+    height:19px;
+    border-top:1px solid transparent;
+    display:flex;
+}
+.changes1 p:nth-of-type(1){
+    margin-right:25px;
+}
+.changes1 i{
+    display:block;
+    border:5px solid transparent;
+    border-top-color:#ccc;
+    margin-top:9px;
+    margin-left:9px;
+
+}
+.changes2{
+    cursor:pointer;
+}
+.changes2 p:nth-of-type(1){
+    float:left;
+    line-height:24px;
+    margin-right:10px;
+}
+.changes2 p:nth-of-type(2){
+    width:46px;
+    height:24px;
+    background-color:#ccc;
+    float:left;
+    transition:all .2s;
+}
+.changes2 i{
+    display:block;
+    width:18px;
+    height:18px;
+    background-color:#fff;
+    margin-top:3px;
+    margin-left:3px;
+    transition:all .3s;
+    z-index:3;
+}
+.changes .changes2 .active{
+    background-color: rgb(192,167,94);
+}
+.changes2 .move{
+    margin-left:26px;
+}
+/* 信息 */
+.info{
+    width:100%;
+    height:300px;
+    background-color:rgb(51,51,51);
+}
+.infos{
+    width:1180px;
+    height:300px;
+    margin:0 auto;
+    padding:26px 0;
+}
+.infos h3{
+    color:#999;
+    font-size:18px;
+    margin-bottom:26px;
+}
+.infos .infos1{
+    display:flex;
+    justify-content:space-between;
+}
+.infos .infos1 .title{
+    display: block;
+    margin-bottom:26px;
+    color:#999;
+    font-size:14px;
+}
+.infos .infos1 .item{
+    display: block;
+    font-size:14px;
+    color:#ddd;
+    margin-bottom:10px;
+}
+.infos .infos1 .item:hover{
+    color:#000;
+}
+.infos .infos1_content1,
+.infos .infos1_content2,
+.infos .infos1_content3,
+.infos .infos1_content4{
+    width:280px;
+    height:200px;
+    margin-right:10px;
+}
+.infos .infos1_content3{
+    position: relative;
+}
+.infos .infos1_content3 a:nth-of-type(4):hover~.imgs{
+    display:block;
+}
+.infos .infos1_content3 a:nth-of-type(5){
+    display: block;
+    width:95px;
+    height:95px;
+    position:absolute;
+    top:55px;
+    left:55px;
+    display: none;
+}
+.infos .infos1_content3 a:nth-of-type(5) img{
+    display:block;
+}
+/* 版权 */
+.copyright{
+    width:100%;
+    height:60px;
+    background-color:rgb(34,34,34);
+}
+.copyrights{
+    width:1180px;
+    height:60px;
+    margin:0 auto;
+}
+.copyrights p{
+    font-size:14px;
+    color:#999;
+    line-height:60px;
+}

@@ -1,0 +1,253 @@
+[
+    {
+        "name": "全部",
+        "category": "",
+        "sub": []
+    },
+    {
+        "name": "LOGO / 品牌设计",
+        "category": "logo_brand",
+        "sub": [
+            {
+                "name": "LOGO设计",
+                "sub_category": "logo_design"
+            },
+            {
+                "name": "VI 系统设计",
+                "sub_category": "vi_system_brand"
+            },
+            {
+                "name": "名片设计",
+                "sub_category": "business_card_brand"
+            },
+            {
+                "name": "展位设计",
+                "sub_category": "space_brand"
+            },
+            {
+                "name": "企业礼品定制",
+                "sub_category": "business_gift_brand"
+            }
+        ]
+    },
+    {
+        "name": "UI 设计",
+        "category": "web_app_ui",
+        "sub": [
+            {
+                "name": "网页设计",
+                "sub_category": "web_ui"
+            },
+            {
+                "name": "App设计",
+                "sub_category": "app_ui"
+            },
+            {
+                "name": "移动网页/h5页面设计",
+                "sub_category": "mobile_web_ui"
+            },
+            {
+                "name": "活动页面设计",
+                "sub_category": "event_ui"
+            },
+            {
+                "name": "icon 设计",
+                "sub_category": "icon_ui"
+            },
+            {
+                "name": "banner 设计",
+                "sub_category": "banner_ui"
+            },
+            {
+                "name": "其他 UI 设计",
+                "sub_category": "ui_others"
+            }
+        ]
+    },
+    {
+        "name": "绘画/插画",
+        "category": "paint_illustration",
+        "sub": [
+            {
+                "name": "插画设计",
+                "sub_category": "illustration"
+            },
+            {
+                "name": "原画设计",
+                "sub_category": "origin_paint"
+            },
+            {
+                "name": "漫画设计",
+                "sub_category": "cartoon_paint"
+            },
+            {
+                "name": "形象/吉祥物",
+                "sub_category": "mascot"
+            },
+            {
+                "name": "其他插画艺术",
+                "sub_category": "paint_others"
+            }
+        ]
+    },
+    {
+        "name": "工业产品",
+        "category": "industry_product",
+        "sub": [
+            {
+                "name": "产品外观设计",
+                "sub_category": "appearance_product"
+            },
+            {
+                "name": "3D打印设计",
+                "sub_category": "3d_print"
+            },
+            {
+                "name": "其他工业设计",
+                "sub_category": "industry_others"
+            }
+        ]
+    },
+    {
+        "name": "影视/动画",
+        "category": "video_animation",
+        "sub": [
+            {
+                "name": "动画设计",
+                "sub_category": "animation"
+            },
+            {
+                "name": "宣传片/广告设计",
+                "sub_category": "ad_video"
+            },
+            {
+                "name": "视频后期",
+                "sub_category": "video_post_hour"
+            }
+        ]
+    },
+    {
+        "name": "摄影",
+        "category": "photography",
+        "sub": [
+            {
+                "name": "品牌摄影",
+                "sub_category": "brand_photography"
+            },
+            {
+                "name": "产品摄影",
+                "sub_category": "product_photography"
+            },
+            {
+                "name": "人物摄影",
+                "sub_category": "figures_photography"
+            },
+            {
+                "name": "后期摄影",
+                "sub_category": "post_production_photography"
+            },
+            {
+                "name": "其他摄影",
+                "sub_category": "photography_others"
+            }
+        ]
+    },
+    {
+        "name": "服装设计",
+        "category": "costume_design",
+        "sub": [
+            {
+                "name": "高级定制",
+                "sub_category": "custom-tailor"
+            },
+            {
+                "name": "T-shirt图案设计",
+                "sub_category": "tshirt_costume"
+            },
+            {
+                "name": "箱包设计",
+                "sub_category": "case_bag"
+            },
+            {
+                "name": "其他服装设计",
+                "sub_category": "costume_others"
+            }
+        ]
+    },
+    {
+        "name": "室内设计",
+        "category": "interior_home_design",
+        "sub": [
+            {
+                "name": "室内设计",
+                "sub_category": "interior_design"
+            },
+            {
+                "name": "家居/软转设计",
+                "sub_category": "home_design"
+            },
+            {
+                "name": "办公室空间设计",
+                "sub_category": "office_design"
+            },
+            {
+                "name": "其他室内设计",
+                "sub_category": "interior_others"
+            }
+        ]
+    },
+    {
+        "name": "造型设计",
+        "category": "fashion_design",
+        "sub": [
+            {
+                "name": "Q版形象",
+                "sub_category": "cute_version"
+            },
+            {
+                "name": "纹身",
+                "sub_category": "tattoo"
+            },
+            {
+                "name": "发型",
+                "sub_category": "hair_style"
+            },
+            {
+                "name": "穿搭",
+                "sub_category": "apparel"
+            },
+            {
+                "name": "眼妆",
+                "sub_category": "makeup"
+            }
+        ]
+    },
+    {
+        "name": "私家定制",
+        "category": "custom_design",
+        "sub": [
+            {
+                "name": "中国美物",
+                "sub_category": "chinese_beautiful_things"
+            },
+            {
+                "name": "动漫周边",
+                "sub_category": "anime_related_products"
+            },
+            {
+                "name": "明星周边",
+                "sub_category": "star_related_products"
+            }
+        ]
+    },
+    {
+        "name": "其他",
+        "category": "others",
+        "sub": [
+            {
+                "name": "其他子类",
+                "sub_category": "sub_others"
+            }
+        ]
+    }
+]

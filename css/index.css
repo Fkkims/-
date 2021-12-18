@@ -1,0 +1,874 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.fc {
+    color: #222;
+    font-weight: 400;
+}
+
+.box {
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+/* 顶部 */
+.header {
+    width: 100%;
+    height: 78px;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: #222;
+    box-shadow: 0 2px 0 0 rgb(0 0 0 / 2%);
+    z-index: 20;
+    transition: background 0.2s ease-in-out;
+}
+
+.top {
+    background-color: transparent;
+    color: #fff;
+}
+
+.header .container {
+    width: 1180px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header .logo {
+    width: 180px;
+    height: 30px;
+    margin-right: 5px;
+    background-image: url("https://muse.huaban.com/assets/c257ccb2a5a50804cc67d3cc09c3f337.svg");
+}
+
+.top .logo {
+    width: 180px;
+    height: 30px;
+    margin-right: 5px;
+    background-image: url("https://muse.huaban.com/assets/0477e743072134634690da795644cd26.svg");
+}
+
+.top .nav>a {
+    color: #fff !important;
+}
+
+.top .nav .item>a {
+    color: #fff !important;
+}
+
+.top .nav .item>i {
+    border-top-color: #fff !important;
+}
+
+.header .nav {
+    display: flex;
+    height: 100%;
+}
+
+.header .nav .item {
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.header .nav .arrow {
+    display: block;
+    border: 5px solid transparent;
+    border-top-color: #000;
+    margin: 0 0 0 1em;
+}
+
+.header .nav .item:hover .submenu {
+    display: block;
+}
+
+.header .nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -35px;
+    width: 360px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 3%), 0 1px 3px 0 rgb(0 0 0 / 7%),
+        0 4px 16px 0 rgb(0 0 0 / 7%);
+}
+
+.header .nav .submenu div {
+    left: 0;
+    min-width: calc(100% - 1px);
+    border-radius: 0;
+    background: #fff;
+    margin: 0;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.header .nav .submenu a {
+    margin-left: 0;
+    margin-right: 0;
+    width: calc(50% - 2 * 0.5rem);
+    padding: 12px 0 !important;
+    height: 40px;
+    color: #000;
+    font-weight: 400;
+}
+
+.header .nav a:hover {
+    color: tomato;
+}
+
+.header .nav .submenu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 34%;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.header .login_register {
+    margin-left: auto !important;
+}
+
+.header .login_register button {
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 6px 20px;
+    border: 1px solid transparent;
+    width: 75px;
+    height: 34px;
+    line-height: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.header .login_register .login:hover {
+    color: #fff;
+    background-color: #ccc;
+}
+
+.header .login_register .register {
+    background: #c0a75e;
+    color: #fff;
+}
+
+/* 轮播图 */
+.swiper-container {
+    width: 100%;
+    height: 620px;
+    position: relative;
+}
+
+.swiper-container .tips {
+    height: 620px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+
+.swiper-container .tips .tipsA {
+    width: 1180px;
+    height: 620px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.swiper-container .tips .tipsA .tipsA1 img {
+    width: 490px;
+    height: 193px;
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.swiper-container .tips .tipsA .tipsA1 .tipsA1_service {
+    display: flex;
+    position: absolute;
+    top: 56%;
+    left: 0;
+}
+
+.swiper-container .tips .tipsA .tipsA1 .tipsA1_service a {
+    width: 114px;
+    height: 42px;
+    padding: 8px 24px;
+    color: #fff;
+    line-height: 26px;
+    background: transparent;
+}
+
+.swiper-container .tips .tipsA .tipsA1 .tipsA1_service a:nth-of-type(1) {
+    background-color: #c0a75e;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.swiper-container .tips .tipsA .tipsA1 .tipsA1_service a:nth-of-type(2) {
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-left: 22px;
+}
+
+.swiper-container .tips .tipsA .tipsA1 .tipsA1_service a:nth-of-type(1):hover {
+    background-color: #bea046;
+}
+
+/* 轮播图下介绍 */
+.present {
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+    padding: 60px 0 120px;
+}
+
+.presents {
+    width: 1180px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.presents .title {
+    width: 512px;
+    height: 24px;
+    background: url(https://muse.huaban.com/assets/1921757c61d97713fff81352b1295c1c.svg) no-repeat;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.presents .content {
+    display: flex;
+}
+
+.presents .content .contents {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presents .content .contents img {
+    display: block;
+}
+
+.presents .content .contents img:nth-of-type(2) {
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.presents .content .contents p {
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* 设计师 */
+.design {
+    width: 100%;
+    height: 595px;
+    padding-top: 70px;
+    margin-bottom: 70px;
+}
+
+.designer {
+    width: 1180px;
+    height: 525px;
+    margin: 0 auto;
+}
+
+.designer .title {
+    width: 512px;
+    height: 24px;
+    background: url(https://muse.huaban.com/assets/1921757c61d97713fff81352b1295c1c.svg) no-repeat 0 -100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.designer .light {
+    width: 100px;
+    height: 2px;
+    background-color: #c0a75e;
+    margin: 30px auto;
+}
+
+.designer .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.designer .content .item {
+    padding: 20px;
+    margin: 0 1px 2px;
+    width: 194px;
+    height: 158px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    cursor: pointer;
+    transition: all .3s
+}
+
+.designer .content .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 1px 20px 0px #ddd;
+}
+
+.designer .content .item img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 28px;
+}
+
+.designer .content .item p {
+    letter-spacing: 4px;
+}
+
+.designer .other {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.designer .other .tit {
+    margin: 40px 0 16px 0;
+    color: #999;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.designer .other .others {
+    display: flex;
+}
+
+.designer .other .others a {
+    display: block;
+    width: 146px;
+    height: 44px;
+    text-align: center;
+    line-height: 28px;
+    padding: 8px 24px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    color: #000;
+}
+
+.designer .other .others a:nth-of-type(1) {
+    margin-right: 18px;
+}
+
+.designer .other .others a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* 设计中心 */
+.center {
+    height: 540px;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.centers {
+    width: 1180px;
+    height: 540px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.centers::before {
+    display: block;
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+}
+
+.centers::after {
+    display: block;
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 18px;
+    right: 0px;
+}
+
+.centers .title {
+    width: 512px;
+    height: 24px;
+    background: url(https://muse.huaban.com/assets/1921757c61d97713fff81352b1295c1c.svg) no-repeat 0 -200px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.centers .centers_a {
+    width: 1180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.centers .centers_a .award {
+    width: 374px;
+    background: #fff;
+    padding: 20px 0 40px 0;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.centers .centers_a .award:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 1px 20px 0px #ddd;
+}
+
+.centers .centers_a .award img {
+    display: block;
+    width: 220px;
+    height: 150px;
+    margin-bottom: 22px;
+}
+
+.centers .centers_a .award label {
+    display: block;
+    color: #c0a75e;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.centers .centers_a .award p {
+    font-size: 14px;
+    color: #999;
+}
+
+.centers .centers_a .award .light {
+    width: 40px;
+    height: 1px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    background-color: #c0a75e;
+}
+
+.centers .next {
+    margin-top: 40px;
+    letter-spacing: 4px;
+    color: #999;
+    text-align: center;
+}
+
+.centers .next span {
+    cursor: pointer;
+    color: #000;
+}
+
+/* 专业设计师 */
+.major {
+    width: 100%;
+    height: 1016px;
+    background: #fff;
+    padding: 70px 0 60px;
+}
+
+.majors {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.majors .title {
+    width: 512px;
+    height: 24px;
+    background: url(https://muse.huaban.com/assets/1921757c61d97713fff81352b1295c1c.svg) no-repeat 0 -300px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.majors .light {
+    width: 100px;
+    height: 2px;
+    background-color: #c0a75e;
+    margin: 30px auto;
+}
+
+.majors .person {
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+}
+
+.majors .person .person1 {
+    display: flex;
+    width: 570px;
+    height: 520px;
+    padding-right: 20px;
+}
+
+.majors .person .person1 img {
+    display: block;
+    width: 280px;
+    height: 320px;
+    cursor: pointer;
+}
+
+.majors .person .person1 .person1_text {
+    width: 290px;
+    height: 320px;
+    background-image: linear-gradient(to right, #f3f3f3, #f3f3f3 200px, transparent 200px, transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.majors .person .person1 .person1_text label:nth-of-type(1) {
+    display: block;
+    font-size: 64px;
+    line-height: 64px;
+    color: #ddd;
+    /* z-index: 3; */
+}
+
+.majors .person .person1 .person1_text label:nth-of-type(2) {
+    display: block;
+    margin-top: -44px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: #c0a75e;
+}
+
+.majors .person .person1 .person1_text .name {
+    font-size: 28px;
+    color: #222;
+    margin-top: 7px;
+    padding-left: 28px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.majors .person .person1 .person1_text .name:hover {
+    color: #c0a75e;
+}
+
+.majors .person .person1 .person1_text p {
+    color: #9d9d9d;
+    font-size: 14px;
+    text-align: right;
+    padding-left: 12px;
+}
+
+.majors .person .person1:nth-of-type(2) {
+    margin-top: 200px;
+
+}
+
+.majors .person .person1:nth-of-type(2) .person1_text {
+    background-image: linear-gradient(to left, #f3f3f3, #f3f3f3 200px, transparent 200px, transparent);
+    align-items: flex-start;
+}
+
+.majors .person .person1:nth-of-type(2) p {
+    text-align: left;
+    padding-left: 0;
+    padding-right: 12px;
+}
+
+.majors .person .person1:nth-of-type(3) {
+    margin-top: -250px;
+}
+
+/* 成功实例 */
+.fact {
+    width: 100%;
+    height: 772px;
+    padding-top: 70px;
+    position: relative;
+}
+
+.facts {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.facts .title {
+    width: 512px;
+    height: 24px;
+    background: url(https://muse.huaban.com/assets/1921757c61d97713fff81352b1295c1c.svg) no-repeat 0 -400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.facts>.light {
+    width: 100px;
+    height: 2px;
+    background-color: #c0a75e;
+    margin: 30px auto;
+}
+
+.facts .swiper1 {
+    width: 1180px;
+    height: 616px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+.facts .swiper1 .swiper-slide {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition:all .2s;
+    cursor:pointer;
+    background-color: #fff;
+}
+.facts .swiper1 .swiper-slide:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 1px 20px 0px #ddd;
+}
+
+.facts .swiper1 .swiper-slide img {
+    display: block;
+    width: 380px;
+    height: 380px;
+    margin-bottom: 24px;
+}
+
+.facts .swiper1 .swiper-slide h4 {
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 3px;
+    line-height: 34px;
+}
+
+.facts .swiper1 .swiper-slide>.light {
+    width: 40px;
+    height: 1px;
+    margin-top: 10px;
+    background-color: #c0a75e;
+    margin-bottom: 14px;
+}
+.facts .swiper1 .swiper-slide p{
+    color:#999;
+    letter-spacing:3px;
+    margin-bottom:10px;
+    font-size:14px;
+}
+.facts .swiper1 .swiper-slide span{
+    font-size:14px;
+    color:#c0a75e;
+}
+/* 马上找到 */
+.find{
+    width:100%;
+    height:406px;
+    background-color:#fff;
+    padding:70px 0 110px;
+}
+.finds{
+    width:1180px;
+    margin:0 auto;
+}
+.finds .title{
+    width: 512px;
+    height: 24px;
+    background: url(https://muse.huaban.com/assets/1921757c61d97713fff81352b1295c1c.svg) no-repeat 0 -100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.finds>.light{
+    width: 100px;
+    height: 2px;
+    background-color: #c0a75e;
+    margin: 30px auto;
+}
+.finds .inperson{
+    display: flex;
+    flex-wrap:wrap;
+}
+.finds .inperson .inperson1{
+    width:194px;
+    height:68px;
+    padding:24px 50px;
+    text-align:center;
+    background-color:#f8f8f8;
+    margin:0 1px 2px;
+    color:#555;
+    font-size:14px;
+    cursor:pointer;
+    transition:all .2s;
+}
+.finds .inperson .inperson1:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 1px 20px 0px #ddd;
+}
+/* 他们选择 */
+.choose{
+    width:100%;
+    height:400px;
+    padding-top:70px;
+}
+.chooses{
+    width:1180px;
+    margin:0 auto;
+}
+.chooses .title{
+    width: 512px;
+    height: 24px;
+    background: url(https://muse.huaban.com/assets/1921757c61d97713fff81352b1295c1c.svg) no-repeat 0 -500px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.chooses .light{
+    width: 100px;
+    height: 2px;
+    background-color: #c0a75e;
+    margin: 30px auto;
+}
+.chooses .company{
+    text-align: center;
+}
+.chooses  .company a{
+    display:inline-block;
+    margin:0 35px 40px;
+    height:36px;
+
+}
+.chooses  .company a img{
+    display:block;
+    height:100%;
+}
+/* 信息 */
+.info {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(51, 51, 51);
+}
+
+.infos {
+    width: 1180px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 26px 0;
+}
+
+.infos h3 {
+    color: #999;
+    font-size: 18px;
+    margin-bottom: 26px;
+}
+
+.infos .infos1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infos .infos1 .title {
+    display: block;
+    margin-bottom: 26px;
+    color: #999;
+    font-size: 14px;
+}
+
+.infos .infos1 .item {
+    display: block;
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.infos .infos1 .item:hover {
+    color: #000;
+}
+
+.infos .infos1_content1,
+.infos .infos1_content2,
+.infos .infos1_content3,
+.infos .infos1_content4 {
+    width: 280px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+.infos .infos1_content3 {
+    position: relative;
+}
+
+.infos .infos1_content3 a:nth-of-type(4):hover~.imgs {
+    display: block;
+}
+
+.infos .infos1_content3 a:nth-of-type(5) {
+    display: block;
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    top: 55px;
+    left: 55px;
+    display: none;
+}
+
+.infos .infos1_content3 a:nth-of-type(5) img {
+    display: block;
+}
+
+/* 版权 */
+.copyright {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(34, 34, 34);
+}
+
+.copyrights {
+    width: 1180px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.copyrights p {
+    font-size: 14px;
+    color: #999;
+    line-height: 60px;
+}

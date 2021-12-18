@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/zhuce.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/owncookie.js"></script>
+</head>
+
+<body>
+
+    <div class="box">
+        <form action="">
+            <h2>欢迎注册</h2>
+            <p>已有账号？<a href="./login.html">登录</a></p>
+            <ul>
+                <li>
+                    <label for="">用户名</label>
+                    <input type="text" placeholder="请设置用户名" name="username">
+                    <!-- <span class="s1">用户名由4-9位数字、字母，且开头为字母组成</span> -->
+                </li>
+                <li>
+                    <label for="">手机号</label>
+                    <input type="text" placeholder="可用于登录和找回密码" name="tel">
+                </li>
+                <li>
+                    <label for="">密<span>码</span></label>
+                    <input type="password" placeholder="请设置密码" name="password">
+                    <!-- <span class="s3">密码由6-10个数字、字母、标点符号组成</span> -->
+                </li>
+                <li>
+                    <label for="">验证码</label>
+                    <input type="text" placeholder="请输入验证码" name="request">
+                </li>
+            </ul>
+            <button class="btn2">注册</button>
+        </form>
+        <button class="btn1">获取验证码</button>
+    </div>
+
+
+    <script src="../js/zhuce.js"></script>
+    <!-- <script>
+       
+        btn1.onclick = function(){
+            var e = window.event;
+            e.preventDefault();
+            var rei = parseInt((Math.random()*899999)+100000);
+            inp4.value = rei;
+        }
+    </script> -->
+</body>
+
+</html>

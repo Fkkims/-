@@ -1,0 +1,514 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#f7f7f7;
+}
+a {
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+ul,
+li {
+    list-style: none;
+}
+.fc {
+    color: #222;
+    font-weight: 400;
+}
+.box {
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+/* 顶部 */
+.header {
+    width: 100%;
+    height: 78px;
+    background-color: #fff;
+    position: sticky;
+    color: #222;
+    box-shadow: 0 2px 0 0 rgb(0 0 0 / 2%);
+    z-index: 20;
+    transition: background 0.2s ease-in-out;
+}
+.header .container {
+    width:1180px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin:0 auto;
+}
+.header .logo {
+    width: 180px;
+    height: 30px;
+    margin-right: 5px;
+    background-image: url("https://muse.huaban.com/assets/c257ccb2a5a50804cc67d3cc09c3f337.svg");
+}
+.header .nav {
+    display: flex;
+    height: 100%;
+}
+.header .nav .item {
+    margin-left: 35px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.header .nav .arrow {
+    display: block;
+    border: 5px solid transparent;
+    border-top-color: #000;
+    margin: 0 0 0 1em;
+}
+.header .nav .item:hover .submenu {
+    display: block;
+}
+
+.header .nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -35px;
+    width: 360px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 3%), 0 1px 3px 0 rgb(0 0 0 / 7%),
+        0 4px 16px 0 rgb(0 0 0 / 7%);
+}
+.header .nav .submenu div {
+    left: 0;
+    min-width: calc(100% - 1px);
+    border-radius: 0;
+    background: #fff;
+    margin: 0;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 8%);
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.header .nav .submenu a {
+    margin-left: 0;
+    margin-right: 0;
+    width: calc(50% - 2 * 0.5rem);
+    padding: 12px 0 !important;
+    height: 40px;
+    color: #000;
+    font-weight: 400;
+}
+
+.header .nav a:hover {
+    color: tomato;
+}
+.header .nav .submenu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 34%;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+    border-left: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.header .login_register {
+    margin-left: auto !important;
+}
+.header .login_register button {
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 6px 20px;
+    border: 1px solid transparent;
+    width: 75px;
+    height: 34px;
+    line-height: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.header .login_register .login:hover {
+    color: #fff;
+    background-color: #ccc;
+}
+.header .login_register .register {
+    background: #c0a75e;
+    color: #fff;
+}
+/* 用户 */
+.use1{
+    margin-top:20px;
+    width:100%;
+    margin-bottom:65px;
+}
+.user1{
+    width:1200px;
+    padding:0 10px;
+    margin:0 auto;
+    display: flex;
+}
+.user1 .user_left{
+    width:889px;
+    height:182px;
+    padding: 10px 0;
+    display:flex;
+    align-items:center;
+    position:relative;
+    border-right:1px solid #ccc;
+}
+.user1 .user_left>img{
+    display:block;
+    width:120px;
+    height:120px;
+    border-radius:60px;
+    margin-right:20px;
+}
+.user1 .user_left .user_left1{
+    padding-top:20px;
+}
+.user1 .user_left .user_left1 h3{
+    margin-bottom:14px;
+}
+.user1 .user_left .user_left1 .lab{
+    margin-bottom:10px;
+    font-size:16px;
+    color:#999;
+}
+.user1 .user_left .user_left1 .lab span{
+    margin-left:30px;
+}
+.user1 .user_left .user_left1 .intro{
+    width:672px;
+    font-size:14px;
+    line-height:20px;
+}
+.user1 .user_left .talk{
+    width:40px;
+    height:40px;
+    background-color:#fff;
+    position:absolute;
+    border:1px solid #ddd;
+    border-radius: 3px;
+    top:40px;
+    right:26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.user1 .user_left .talk p{
+    width:18px;
+    height:18px;
+    margin-top: 4px;
+    background: url(https://muse.huaban.com/assets/7fc286f1aa73c0c69c4f56693c188304.svg);
+}
+.user1 .user_left .talk div{
+    position:absolute;
+    top:-55px;
+    left:-21px;
+    width:80px;
+    height:40px;
+    background: #fff;
+    border:1px solid #ddd;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0px 2px 3px 1px #ddd;
+    display:none;
+}
+.user1 .user_left .talk div::after{
+    content:'';
+    border:10px solid transparent;
+    border-top-color:#fff;
+    position: absolute;
+    left:38%;
+    bottom:-19px;
+}
+.user1 .user_left .talk:hover{
+    border-color:#999;
+}
+.user1 .user_left .talk:hover div{
+    display:block;
+}
+.user1 .user_right{
+    padding: 20px 0 10px 20px;
+    width:282px;
+}
+.user1 .user_right div{
+    margin-bottom:14px;
+    font-size:14px;
+    color:#777;
+    line-height:22px;
+}
+.user1 .user_right div i {
+    display:block;
+    float:left;
+    margin-top:2px;
+    width:18px;
+    height: 18px;
+    background:url(https://muse.huaban.com/assets/3c5583a191a585956fd8efedd52ea2d2.svg) no-repeat center center;
+}
+.user1 .user_right div label{
+    margin-left:10px;
+}
+.user1 .user_right div span{
+    float:right;
+}
+.user1 .user_right .user_right2 i{
+    background:url(https://muse.huaban.com/assets/2d9435c7bb7d8a668a12cbd48028daa6.svg) no-repeat center center;
+}
+.user1 .user_right .user_right3 i{
+    background: url(https://muse.huaban.com/assets/449652dee54cdd2c62b51bda2399c4fd.svg) no-repeat center center;
+}	
+.user1 .user_right .user_right3 span{
+    color:#c0a75e;
+    font-size:16px;
+}
+/* 用户设计 */
+.design{
+    width:100%;
+    height:48px;
+}
+.designs{
+    width:1180px;
+    height:44px;
+    margin:0 auto;
+    border-top:2px solid #000;
+    border-bottom:2px solid #999;
+    color:#999;
+}
+.designs .designs_this{
+    display:flex;
+    float:left;
+
+}
+.designs .designs_this li{
+    /* padding:14px; */
+    line-height:16px;
+    height:42px;
+    cursor: pointer;
+    padding:14px;
+}
+.designs .designs_this .active{
+    border-bottom:2px solid #000;
+    color:#000;
+}
+.designs .designs_this li:hover{
+    color:#000;
+}
+.designs  p {
+    float: right;
+    line-height:16px;
+    height:42px;
+    padding:14px;
+    cursor: pointer;
+}
+.designs  p:hover{
+    color:#000;
+}
+/* 内容 */
+.content{
+    margin-top:14px;
+    width:100%;
+    margin-bottom:20px;
+}
+/* 个人资料 */
+.contents_text{
+    width:1180px;
+    background:#fff;
+    padding:50px 30px 20px;
+    margin:0 auto;
+}
+.contents_text .item{
+    display:flex;
+    margin-bottom:30px;
+    color:#777;
+    font-size:14px;
+}
+.contents_text .item label{
+    width:150px;
+    text-align:right;
+    margin-right:30px;
+}
+.contents_text .item .person{
+    width:950px;
+}
+/* 设计服务与 */
+.contents_own{
+    width:1200px;
+    display:flex;
+    flex-wrap:wrap;
+    margin:0 auto;
+}
+.contents_own img{
+    align-self: center;
+}
+.contents_own .item {
+    width: calc(25% - 20px);
+    margin:12.5px 10px;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+    /* margin: 0.85em 0.5em; */
+    box-shadow: 0 0 2px 0 rgb(0 0 0 / 4%), 0 1px 6px 0 rgb(0 0 0 / 3%);
+    transition:all .2s;
+    cursor: pointer;
+}
+.contents_own .item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 7%), 0 4px 16px 0 rgb(0 0 0 / 7%);
+}
+.contents_own .item::before{
+    content:'';
+    display:inline-block;
+    width:42px;
+    height:42px;
+    background: url(https://muse.huaban.com/assets/c8b8ed832907271233b189a68fe47c3c.svg) no-repeat center center rgba(0,0,0,.5);
+    position:absolute;
+    top:-42px;
+    left:225px;
+    transition:top .2s;
+    cursor: pointer;
+}
+.contents_own .item:hover::before{
+    top:0px;
+}
+.contents_own .item img {
+    width: 280px;
+    height: 280px;
+    display: block;
+    cursor: pointer;
+}
+.contents_own .item .title {
+    border-top: 1px solid rgba(34, 36, 38, 0.1);
+    background: 0 0;
+    margin: 0;
+    font-weight: 700;
+    padding: 1em;
+    color: #222;
+    display: block;
+    text-align: center;
+}
+.contents_own .item .extra {
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.contents_own .item .extra::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 1px;
+    background-color: #ddd;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.contents_own .item .extra label {
+    color: #222;
+    font-size: 18px;
+}
+.contents_own .item .extra p {
+    font-size: 80%;
+    margin-top: 10px;
+    color: rgb(204, 202, 202);
+}
+/* 原创 */
+.contents_own .item .title1 {
+    border-top: 1px solid rgba(34, 36, 38, 0.1);
+    background: 0 0;
+    margin: 0;
+    font-weight: 700;
+    padding: 1em;
+    font-size:14px;
+    color: #222;
+    display: block;
+    text-align: center;
+}
+.contents_own .item .extra .tip1{
+    font-size: 80%;
+    margin-top: 10px;
+    color:rgba(0,0,0,.4);
+}
+
+/* 信息 */
+.info{
+    width:100%;
+    height:300px;
+    background-color:rgb(51,51,51);
+}
+.infos{
+    width:1180px;
+    height:300px;
+    margin:0 auto;
+    padding:26px 0;
+}
+.infos h3{
+    color:#999;
+    font-size:18px;
+    margin-bottom:26px;
+}
+.infos .infos1{
+    display:flex;
+    justify-content:space-between;
+}
+.infos .infos1 .title{
+    display: block;
+    margin-bottom:26px;
+    color:#999;
+    font-size:14px;
+}
+.infos .infos1 .item{
+    display: block;
+    font-size:14px;
+    color:#ddd;
+    margin-bottom:10px;
+}
+.infos .infos1 .item:hover{
+    color:#000;
+}
+.infos .infos1_content1,
+.infos .infos1_content2,
+.infos .infos1_content3,
+.infos .infos1_content4{
+    width:280px;
+    height:200px;
+    margin-right:10px;
+}
+.infos .infos1_content3{
+    position: relative;
+}
+.infos .infos1_content3 a:nth-of-type(4):hover~.imgs{
+    display:block;
+}
+.infos .infos1_content3 a:nth-of-type(5){
+    display: block;
+    width:95px;
+    height:95px;
+    position:absolute;
+    top:55px;
+    left:55px;
+    display: none;
+}
+.infos .infos1_content3 a:nth-of-type(5) img{
+    display:block;
+}
+/* 版权 */
+.copyright{
+    width:100%;
+    height:60px;
+    background-color:rgb(34,34,34);
+}
+.copyrights{
+    width:1180px;
+    height:60px;
+    margin:0 auto;
+}
+.copyrights p{
+    font-size:14px;
+    color:#999;
+    line-height:60px;
+}

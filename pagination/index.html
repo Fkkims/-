@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./pagination.js"></script>
+        <script src="../ajax.js"></script>
+    </head>
+    <body>
+        <!-- 用来存放分页结构的元素 -->
+        <div class="box"></div>
+
+        <script>
+            // 参数1：为一个dom元素，表示哪个容器是分页功能
+            // 参数2：是一个对象
+            let box = document.querySelector(".box");
+            new Pagination(box, {
+                pageInfo: {
+                    pagenum: 1,
+                    pagesize: 20,
+                    total: 1000,
+                    totalpage: 50,
+                },
+                textInfo: {
+                    first: "首页",
+                    prev: "上一页",
+                    next: "下一页",
+                    last: "末尾",
+                },
+                async change(index) {
+                    // 点击分页的时候触发这个change函数
+                    // 这个函数有一个参数 表示当前的页数
+                    // 请求花瓣的数据
+                    let res = await pAjax({
+                        url: "https://muse.huaban.com/api/v1/services/",
+                        data: `category=web_app_ui&limit=20&page=${index}`,
+                    });
+                    // https://muse-img.huabanimg.com/72ac92dff53dff327132701e35212e68e50a084d942e4-tlncselsdcxr_/both/280x280
+                    res = JSON.parse(res);
+
+                    // 拼接图片地址
+                    console.log( 'https://muse-img.huabanimg.com/'+ res[0].cover[0].key + '_/both/280x280');
+                },
+            });
+        </script>
+    </body>
+</html>
